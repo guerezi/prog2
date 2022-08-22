@@ -24,6 +24,7 @@ imageBtn?.addEventListener('change', function() {
         let innerGrid = document.querySelector('.inner-grid')
 
         var tag = document.createElement("div");
+        tag.title = "Clique para apagar"
         tag.id = uploadedImage
         tag.style.backgroundImage = `url(${uploadedImage})`
         tag.style.backgroundSize = "contain"
@@ -57,14 +58,15 @@ function validateForm() {
     if (form["date"].value == "") {
         missingField.push("Data")
     }
-    if (form["photos"]) {
+    if (form["photos"].value == "") {
         missingField.push("Fotos")
     }
 
-    if (missingField) {
+    if (missingField.length) {
         alert("Os campos: " + missingField.join(", ") + " devem ser preenchidos")
         return false
     } else {
+        alert("Pedido enviado, entraremos em contato")
         return true
     }
 } 
