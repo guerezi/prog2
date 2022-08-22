@@ -1,0 +1,163 @@
+/* #1d495c, #2a97b8, #ff8800 SCHEME */
+
+/* #19272a, #222a30, #2b2c36, #342f3d, #3d3243 DARK BG*/
+/* #d1d1d3, #e1dbd6, #e2e2e4, #f9f6f2, #fefefe LIGHT BG */
+
+*{
+    font-family: "Montserrat", serif;
+    text-align: justify;
+}
+
+h1,h3 {
+    padding: 1%;
+}
+/* 
+h3{
+    margin: 1%;
+} */
+
+.grid {
+    display: grid;
+	max-width: 90%;
+	margin: 0 auto;
+}
+
+.body-grid {
+    grid:
+        "logo logo" auto
+        "sidenav content" auto
+        "footer footer" 80px 
+        / 25% auto 0px;
+}
+
+.inner-grid {
+    grid: auto / 25% 75%;
+    margin: 0px;
+    background-color: transparent;
+}
+
+.grid-item {
+    padding: 0.5%;
+}
+
+.page-logo {
+    grid-area: logo;
+    background-color: #1d495c;
+}
+
+.page-logo h1 {
+    font-weight: bolder;
+    font-size: xx-large;
+    background-color: #1d495c ;
+}
+
+.page-content {
+    grid-area: content;
+    padding: 15px;    
+}
+
+.page-content p {
+    padding-top: 12px;
+    background-color: transparent;
+}    
+
+.page-content h2 {
+    padding-top: 12px;
+    background-color: transparent;
+}    
+
+.page-sidenav {
+    grid-area: sidenav;
+    background: #2a97b8;
+}    
+
+.page-sidenav h2 {
+    padding-left: 3%;
+    padding-right: 3%;
+    font-weight: 400;
+    background-color: #2a97b8;
+}
+
+.page-sidenav > h2:nth-child(1) {
+	background: #ff8800;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.page-footer {
+	grid-area: footer;
+    min-height: 7%;
+    padding: 1%;
+    text-align: center;
+}
+
+.page-form {
+    background-color: transparent;
+}
+
+.form-field {
+    background-color: transparent;
+    margin: 3px;
+    padding: 4px;
+}
+
+.form-label {
+    background-color: transparent;
+    margin: 3px;
+    padding: 4px;
+}
+
+.inner-grid > * {
+    background-color: transparent;
+}
+
+input[type=submit] {
+    background-color: #ff8800;
+    border: none;
+    text-decoration: none;
+    font-size: large;
+    padding: 10px;    
+    cursor: pointer;
+}
+
+@media (prefers-color-scheme: dark) {
+    * {
+        color: #fefefe;
+        background-color: #2b2c36;
+    }
+
+    .page-footer {
+        background-color: #19272a;
+    }
+
+    .page-content {
+        background-color: #3d3243;
+    }
+
+    .form-field {
+        border: 1px solid #19272a;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    * {
+        color: #19272a;
+        background-color: #e2e2e4;
+    }
+
+    .page-logo h1 {
+        color: #fefefe;
+    }
+
+    .page-footer {
+        background-color: #d1d1d3;
+    }
+
+    .page-content {
+        background-color: #fefefe;
+    }
+
+    .form-field {
+        border: 1px solid #d1d1d3;
+    }
+}

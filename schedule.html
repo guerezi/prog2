@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+
+    <title>MecanicaCanica</title>
+</head>
+
+<body>
+    <section class="grid body-grid">
+
+        <div class="grid-item page-logo">
+            <h1>
+                MecanicaCanica
+            </h1>
+        </div>
+        
+    
+        <article class="page-item page-content">
+            <h2>Agende:</h2>
+
+            <form name="scheduleForm" onsubmit="validateForm()" method="post" class="page-form" enctype=multipart/form-data>
+                <div class="grid inner-grid">
+                    <h3 class="page-item form-label">Name:</h3>
+                    <input class="page-item form-field" type="text" name="name">
+                    <h3 class="page-item form-label">Telefone:</h3>
+                    <input class="page-item form-field" type="tel" name="phone">
+                    <h3 class="page-item form-label">Data:</h3>
+                    <input class="page-item form-field" type="date" onfocus="this.min=new Date().toISOString().split('T')[0]"  name="date">
+
+                    <h3 class="page-item form-label">Fotos:</h3>
+                    <input class="page-item form-field" id="image-uploader" type="file" name="photos" accept="image/png, image/jpg" >
+                </div>
+                
+                <input type="submit" value="Enviar">                        
+            </form>
+        </article>
+    
+
+        <aside class="grid-item page-sidenav">
+            <h2 id="home">Home</h2>
+            <h2>Quem somos</h2>
+            <h2>Agendar horário</h2>
+            <h2>Contato</h2>
+        </aside>
+    
+        <div class="page-item page-footer">
+            Copyright 2022
+        </div>
+
+    </section>
+
+    <script src="app.js"></script>
+    <noscript>You need to enable JavaScript to view the full site.</noscript>
+</body>
+</html>
