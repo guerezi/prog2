@@ -52,7 +52,7 @@ function validateForm() {
     if (form["name"].value == "") {
         missingField.push("Nome")
     }
-    if (form["phone"].value == "") {
+    if (form["phone"].value == "" && form["phone"].value.match(/^\d+$/) ) {
         missingField.push("Telefone")
     }
     if (form["date"].value == "") {
